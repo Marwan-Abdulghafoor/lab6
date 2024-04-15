@@ -19,9 +19,9 @@ public class Patient {
     private String name;
     private String phone;
     private String email;
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne
     private Address address;
-    @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "patient")
     private List<Appointment> appointments;
 
 }
